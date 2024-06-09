@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 file(GLOB SOURCES src/*)
 
-set(BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../External/asio-1.30.2")
+set(BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../External/asio")
 set(BOOST_INCLUDEDIR "${BOOST_ROOT}/include")
 
 add_executable(${PROJECT_NAME} ${SOURCES})

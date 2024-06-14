@@ -1,2 +1,2 @@
-# chatroom
-A console chatroom in C++ using Boost.Asio for networking. 
+# Bomberman Clone
+A Bomberman clone in C++ using Boost Asio for networking. 

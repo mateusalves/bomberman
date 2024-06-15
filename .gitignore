@@ -29,6 +29,6 @@
 **/compile_commands.json
 
 ## Local
-build/**/*
+**/build/**/*
 bin/*
-.cache/*
+**/.cache/*

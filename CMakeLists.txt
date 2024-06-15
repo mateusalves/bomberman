@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(Networking)
 add_subdirectory(Server)
-add_subdirectory(Client)
+add_subdirectory(Game)

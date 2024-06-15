@@ -19,4 +19,12 @@ target_include_directories(${PROJECT_NAME}
     PRIVATE
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE -lpthread -g)
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    ${ADDITIONAL_LIBS}
+    -lsfml-graphics
+    -lsfml-window
+    -lsfml-system
+    -lsfml-network
+    -lpthread
+    -g)
+

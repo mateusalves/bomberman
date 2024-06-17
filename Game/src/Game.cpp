@@ -21,6 +21,11 @@ void Game::UpdatePlayer()
     player_->Update();
 }
 
+void Game::RenderPlayer()
+{
+    player_->Render(window_);
+}
+
 void Game::Update()
 {
     //Polling window events
@@ -31,6 +36,12 @@ void Game::Update()
         else if (ev_.type == sf::Event::KeyPressed && ev_.key.code == sf::Keyboard::Escape)
             window_.close();
 
+        if (ev_.type == sf::Event::KeyReleased &&
+                (ev_.key.code == sf::Keyboard::A ||
+                 ev_.key.code == sf::Keyboard::D ||
+                 ev_.key.code == sf::Keyboard::W ||
+                 ev_.key.code == sf::Keyboard::S ))
+            player_->ResetAnimationTimer();
     }
 
     UpdatePlayer();
@@ -41,7 +52,7 @@ void Game::Render()
     window_.clear();
 
     //Render game
-
+    RenderPlayer();
 
 
     window_.display();
@@ -51,6 +62,7 @@ void Game::InitWindow_()
 {
     window_.create(sf::VideoMode(800, 600), "Bomberman",
             sf::Style::Close | sf::Style::Titlebar);
+    window_.setFramerateLimit(60);
 }
 
 void Game::InitPlayer_()

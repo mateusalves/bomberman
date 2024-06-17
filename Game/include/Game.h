@@ -13,6 +13,7 @@ public:
     const sf::RenderWindow& GetWindow() const;
 
     void UpdatePlayer();
+    void RenderPlayer();
     void Update();
     void Render();
 
